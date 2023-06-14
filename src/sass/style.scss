@@ -1,0 +1,202 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	height: 100vh;
+	color: white;
+	background-color: #131313;
+	font-family: 'open sans', roboto, sans-serif;
+	font-size: 18px;
+}
+
+.wrap {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 4vh 5vw;
+}
+
+h1,
+h2 {
+	margin-bottom: 5px;
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+p {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.game {
+	display: flex;
+	margin-bottom: 3vh;
+}
+.game div {
+	position: relative;
+	flex-grow: 1;
+	height: 15vh;
+	margin: 5px;
+	border-radius: 3px;
+	background-color: #ffb84c;
+}
+
+.play {
+	height: 130px;
+	text-align: center;
+}
+
+.btn,
+.play input {
+	height: 50px;
+	padding: 10px 20px;
+	font-size: 25px;
+	border: none;
+}
+
+.play div {
+	margin-bottom: 15px;
+}
+
+.play input {
+	width: 80%;
+	outline: none;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.btn {
+	color: white;
+	background-color: #ffb84c;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.error {
+	font-size: 16px;
+	margin: 8px 10px;
+	color: #f266ab;
+}
+
+.panel {
+	margin: 30px 0;
+}
+.panel,
+.score {
+	font-size: 22px;
+}
+
+.panel span,
+.score span {
+	font-weight: bold;
+	color: #ffb84c;
+}
+
+.fa-solid {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 40px;
+	color: white;
+}
+.when-lost {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	background-color: #0000004d;
+}
+
+.when-lost div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 40vh;
+	width: 80vw;
+	padding: 40px 20px;
+	background-color: #b52c2c;
+	border-radius: 5px;
+	box-shadow: 0 0 150px #000000c1;
+}
+
+.author,
+.name {
+	color: white;
+	position: fixed;
+}
+.author {
+	bottom: 5px;
+	right: 10px;
+	font-size: 9px;
+	z-index: -1;
+}
+.name {
+	bottom: 10px;
+	right: 10px;
+	font-family: 'Corinthia', cursive;
+	font-size: 25px;
+	z-index: -1;
+}
+
+@media (min-width: 576px) {
+	.play {
+		display: flex;
+		justify-content: center;
+		height: 80px;
+	}
+
+	.play input {
+		width: 100%;
+		margin: 0 0 0 10px;
+	}
+	.game div {
+		margin: 10px;
+	}
+	.panel,
+	.score {
+		font-size: 30px;
+	}
+	.fa-solid {
+		font-size: 50px;
+	}
+	.when-lost div {
+		width: 60vw;
+	}
+	.error {
+		font-size: 18px;
+	}
+	p {
+		font-size: 20px;
+	}
+	h1 {
+		font-size: 35px;
+	}
+	.author {
+		font-size: 12px;
+	}
+	.name {
+		font-size: 35px;
+	}
+}
+
+@media (min-width: 922px) {
+	.when-lost div {
+		width: 40vw;
+	}
+	h1 {
+		font-size: 40px;
+	}
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Corinthia&family=Roboto:wght@400;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/f5a70fd252.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/style.min.css" />
+		<meta name="author" content="Sojka Tomasz" />
+		<meta
+			name="keywords"
+			content="gry jednoręki bandyta, jednoręki bandyta online, automaty online, emocje hazardowe online"
+		/>
+		<meta
+			name="description"
+			content="Odkryj niesamowitą rozrywkę w grze Jednoręki bandyta online, szansa na wygrane zapewnią Ci niezapomniane doświadczenie hazardowe."
+		/>
+		<title>Gra online - Jednoręki bandyta</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<h1>Jednoręki bandyta</h1>
+			<p>
+				Wygraj x3 Twoją stawkę!<br />
+				Wygrywasz gdy wylosujesz 3 takie same lub 3 różne karty.
+			</p>
+			<section class="game">
+				<div class="color"><i class="fa-solid fa-question"></i></div>
+				<div class="color"><i class="fa-solid fa-question"></i></div>
+				<div class="color"><i class="fa-solid fa-question"></i></div>
+			</section>
+			<section class="play">
+				<div>
+					<input type="number" placeholder="Podaj stawkę" id="bid" />
+					<div class="error"></div>
+				</div>
+				<button class="btn" id="start">Zakręć!</button>
+			</section>
+
+			<section class="panel">
+				TWOJE SRODKI: <span class="wallet"></span>
+			</section>
+			<section class="score">
+				<span class="result"></span>
+				Za tobą <span class="number"></span> gier, w tym
+				<span class="win"></span> wygranych i
+				<span class="loss"></span> przegranych
+			</section>
+		</div>
+		<div class="when-lost">
+			<div>
+				<h2>Brak środków</h2>
+				<p>Kliknij przycisk jeżeli chcesz zagrać jeszcze raz.</p>
+				<button class="btn" id="restart">replay!</button>
+			</div>
+		</div>
+		<span class="author">Autor</span>
+		<span class="name">Sojka Tomasz</span>
+		<script src="./js/script.min.js"></script>
+	</body>
+</html>
