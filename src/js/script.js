@@ -35,12 +35,16 @@ class Games {
 	//SPRAWDZENIE WARTOŚCI INPUT
 	inputValue() {
 		this.inputTxt = this.input.value;
+		const errorSond = new Audio('../audio/error.wav');
 		if (this.inputTxt == '') {
 			this.error.textContent = 'Musisz podać wartość stawki!';
+			errorSond.play();
 		} else if (this.inputTxt <= 0) {
 			this.error.textContent = 'Stawka musi być większa niż 0!';
+			errorSond.play();
 		} else if (this.walletCash < this.inputTxt) {
 			this.error.textContent = 'Masz za mało środków!';
+			errorSond.play();
 		} else {
 			this.draw();
 		}
@@ -92,6 +96,8 @@ class Games {
 
 	//WYGRANA
 	winer() {
+		const winnerSong = new Audio('../audio/winer.wav');
+		winnerSong.play();
 		this.numberWin++;
 		this.win.textContent = this.numberWin;
 		this.result.textContent = `Wygrałeś: +${this.inputTxt * 3}$`;
@@ -108,10 +114,16 @@ class Games {
 		this.result.style.color = '#F266AB';
 		this.walletCash -= this.inputTxt;
 		this.wallet.textContent = `${this.walletCash}$`;
+		if (this.walletCash !== 0) {
+			const lostSong = new Audio('../audio/lost.wav');
+			lostSong.play();
+		}
 		//JEŻELI STAN KONTA WYNOSI 0
 		if (this.walletCash === 0) {
 			this.whenLost.style.display = 'flex';
 			window.addEventListener('keydown', this.clickEnterRestart.bind(this));
+			const gameOverSong = new Audio('../audio/game-over.wav');
+			gameOverSong.play();
 		}
 	}
 
