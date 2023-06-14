@@ -25,12 +25,14 @@ class Games {
 		window.addEventListener('keydown', this.clickEnterStart.bind(this));
 	}
 
+	//START GRY NA ENTER
 	clickEnterStart(e) {
 		if (e.keyCode == 13) {
 			this.inputValue();
 		}
 	}
 
+	//SPRAWDZENIE WARTOŚCI INPUT
 	inputValue() {
 		this.inputTxt = this.input.value;
 		if (this.inputTxt == '') {
@@ -44,6 +46,7 @@ class Games {
 		}
 	}
 
+	//LOSOWANIE / WYŚWIETLENIE LOSOWANIA / DODANIE WARTOŚCI DO TABLICY
 	draw() {
 		this.error.textContent = '';
 		this.drawResult.length = 0;
@@ -66,6 +69,7 @@ class Games {
 		this.gameResult();
 	}
 
+	//WARUNKI WYGRANEJ/PRZEGRANEJ
 	gameResult() {
 		this.numberGames++;
 		this.number.textContent = this.numberGames;
@@ -86,6 +90,7 @@ class Games {
 		this.input.value = '';
 	}
 
+	//WYGRANA
 	winer() {
 		this.numberWin++;
 		this.win.textContent = this.numberWin;
@@ -95,6 +100,7 @@ class Games {
 		this.wallet.textContent = `${this.walletCash}$`;
 	}
 
+	//PRZEGRANA
 	lost() {
 		this.numberLoss++;
 		this.loss.textContent = this.numberLoss;
@@ -102,12 +108,14 @@ class Games {
 		this.result.style.color = '#F266AB';
 		this.walletCash -= this.inputTxt;
 		this.wallet.textContent = `${this.walletCash}$`;
+		//JEŻELI STAN KONTA WYNOSI 0
 		if (this.walletCash === 0) {
 			this.whenLost.style.display = 'flex';
 			window.addEventListener('keydown', this.clickEnterRestart.bind(this));
 		}
 	}
 
+	//RESET GRY NA ENTER
 	clickEnterRestart(e) {
 		if (e.keyCode == 13) {
 			location.reload();
